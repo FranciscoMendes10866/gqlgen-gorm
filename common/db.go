@@ -1,7 +1,7 @@
 package common
 
 import (
-	"haumea/graph/customTypes"
+	"github.com/AndriyKalashnykov/gqlgen-gorm/graph/customTypes"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"

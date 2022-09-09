@@ -1,9 +1,9 @@
 package main
 
 import (
-	"haumea/common"
-	"haumea/graph/generated"
-	resolvers "haumea/graph/resolvers"
+	"github.com/AndriyKalashnykov/gqlgen-gorm/common"
+	"github.com/AndriyKalashnykov/gqlgen-gorm/graph/generated"
+	resolvers "github.com/AndriyKalashnykov/gqlgen-gorm/graph/resolvers"
 	"log"
 	"net/http"
 	"os"
