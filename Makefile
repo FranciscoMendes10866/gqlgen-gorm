@@ -11,11 +11,14 @@ generate: clean
 	@sudo rm -rf graph/generated
 	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go run github.com/99designs/gqlgen generate
 
-build:
-	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go build -o ./.bin/server server.go
+test: generate
+	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go test -v ./...
 
 run:
 	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go run server.go
+
+build:
+	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go build -o ./.bin/server server.go
 
 image: generate
 	docker build -t graphql-golang .
