@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/AndriyKalashnykov/gqlgen-gorm/common"
 	"github.com/AndriyKalashnykov/gqlgen-gorm/graph/generated"
 	resolvers "github.com/AndriyKalashnykov/gqlgen-gorm/graph/resolvers"
+	common2 "github.com/AndriyKalashnykov/gqlgen-gorm/internal/common"
 	"log"
 	"net/http"
 	"os"
@@ -20,19 +20,19 @@ func main() {
 		port = defaultPort
 	}
 
-	db, err := common.InitDb()
+	db, err := common2.InitDb()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &resolvers.Resolver{}}))
 
-	customCtx := &common.CustomContext{
+	customCtx := &common2.CustomContext{
 		Database: db,
 	}
 
 	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
-	http.Handle("/query", common.CreateContext(customCtx, srv))
+	http.Handle("/query", common2.CreateContext(customCtx, srv))
 
 	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))

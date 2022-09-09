@@ -21,7 +21,7 @@ build:
 	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go build -o ./.bin/server server.go
 
 image: generate
-	docker build -t graphql-golang .
+	docker build -t gqlgen-gorm .
 
 get: clean
 	@export GO15VENDOREXPERIMENT=0; export GOFLAGS=$(GOFLAGS); go get .

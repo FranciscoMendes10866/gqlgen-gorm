@@ -13,7 +13,6 @@ RUN go mod download
 COPY server.go server.go
 COPY graph/ graph/
 COPY internal/ internal/
-COPY pkg/ pkg/
 
 # Build
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o server server.go
