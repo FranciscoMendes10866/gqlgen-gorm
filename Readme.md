@@ -1,11 +1,33 @@
-# gqlgen-gorm
-Golang + GraphQL + GORM
+# Golang + GraphQL + GORM
+
+## Table Of Contents
+- [GraphQL Server (schema-first) With Golang](#graphql-server-schema-first-with-golang)
+    - [Table Of Contents](#table-of-contents)
+        - [How to Run The Project <a name="how-to-run-project"></a>](#how-to-run-the-project-)
+            - [createTodo](#createTodo)
+            - [getTodo](#getTodo)
+            - [findTodos](#findTodos)
+            - [updateTodo](#updateTodo)
+            - [deleteTodo](#deleteTodo)
+
+### How to Run The Project <a name="how-to-run-project"></a>
+
+Run the server:
+```bash
+make run
+```
+
+Now navigate to https://localhost:4000 you can see GraphiQL playground and query the graphql server.
 
 ```bash
 xdg-open http://localhost:4000/
 ```
 
 ### createTodo
+
+```bash
+make create-todo
+```
 
 ```graphql
 mutation createTodo {
@@ -31,6 +53,10 @@ mutation createTodo {
 
 ### getTodo
 
+```bash
+make get-todo
+```
+
 ```graphql
 query getTodo {
     getTodo(todoId: 1) {
@@ -53,10 +79,14 @@ query getTodo {
 }
 ```
 
-### findTodos
+### getTodos
+
+```bash
+make get-todos
+```
 
 ```graphql
-query findTodos {
+query getTodos {
     getTodos {
         id
         text
@@ -101,6 +131,10 @@ query findTodos {
 
 ### updateTodo
 
+```bash
+make update-todo
+```
+
 ```graphql
 mutation updateTodo {
     updateTodo(input: {id: 1, text: "todo", done: true}) {
@@ -124,6 +158,10 @@ mutation updateTodo {
 ```
 
 ### deleteTodo
+
+```bash
+make delete-todo
+```
 
 ```graphql
 mutation deleteTodo {
