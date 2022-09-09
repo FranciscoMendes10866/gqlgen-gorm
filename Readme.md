@@ -17,7 +17,7 @@ Run the server:
 make run
 ```
 
-Now navigate to https://localhost:4000 you can see GraphiQL playground and query the graphql server.
+Navigate to https://localhost:4000 you can see GraphiQL playground and query the graphql server.
 
 ```bash
 xdg-open http://localhost:4000/
