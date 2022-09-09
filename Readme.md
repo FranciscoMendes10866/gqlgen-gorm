@@ -25,6 +25,8 @@ xdg-open http://localhost:4000/
 
 ### createTodo
 
+Execute createTodo mutation
+
 ```bash
 make create-todo
 ```
@@ -38,6 +40,8 @@ mutation createTodo {
     }
 }
 ```
+
+Expected JSON result:
 
 ```json
 {
@@ -53,6 +57,8 @@ mutation createTodo {
 
 ### getTodo
 
+Execute getTodo query
+
 ```bash
 make get-todo
 ```
@@ -66,6 +72,8 @@ query getTodo {
     }
 }
 ```
+
+Expected JSON result:
 
 ```json
 {
@@ -81,6 +89,8 @@ query getTodo {
 
 ### getTodos
 
+Execute getTodos query
+
 ```bash
 make get-todos
 ```
@@ -94,6 +104,8 @@ query getTodos {
     }
 }
 ```
+
+Expected JSON result:
 
 ```json
 {
@@ -131,6 +143,8 @@ query getTodos {
 
 ### updateTodo
 
+Execute updateTodo mutation
+
 ```bash
 make update-todo
 ```
@@ -144,6 +158,8 @@ mutation updateTodo {
     }
 }
 ```
+
+Expected JSON result:
 
 ```json
 {
@@ -159,6 +175,8 @@ mutation updateTodo {
 
 ### deleteTodo
 
+Execute deleteTodo mutation
+
 ```bash
 make delete-todo
 ```
@@ -172,6 +190,8 @@ mutation deleteTodo {
     }
 }
 ```
+
+Expected JSON result:
 
 ```json
 {
