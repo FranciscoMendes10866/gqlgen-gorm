@@ -126,8 +126,8 @@ $RECYCLE.BIN/
 
 .bin/
 .idea/
-./graph/generated/
-./graph/customTypes/
+graph/generated/
+graph/customTypes/
 dev.db
 
 # End of https://www.toptal.com/developers/gitignore/api/go,visualstudiocode,macos,windows,linux
