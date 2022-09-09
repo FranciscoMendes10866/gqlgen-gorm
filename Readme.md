@@ -1,4 +1,4 @@
-# Golang + GraphQL + GORM
+# Golang + GraphQL + GORM (schema-first)
 
 ## Table Of Contents
 - [GraphQL Server (schema-first) With Golang](#graphql-server-schema-first-with-golang)
