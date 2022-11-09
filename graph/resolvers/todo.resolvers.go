@@ -5,9 +5,10 @@ package graph
 
 import (
 	"context"
-	"haumea/common"
-	"haumea/graph/customTypes"
-	"haumea/graph/generated"
+
+	"github.com/AndriyKalashnykov/gqlgen-gorm/graph/customTypes"
+	"github.com/AndriyKalashnykov/gqlgen-gorm/graph/generated"
+	"github.com/AndriyKalashnykov/gqlgen-gorm/internal/common"
 )
 
 // CreateTodo is the resolver for the createTodo field.
